@@ -69,7 +69,7 @@ redirect: '/admin/dashboard',
 component: resolve => require(['./AdminLayout.vue'], resolve),
 children: [
     {
-      path: '/admin/dashboard',
+      path: '/admin/dashboard/pdrb-per-kapita',
       components: {
         main: resolve => require(['./components/bantenprov/pdrb-per-kapita/PdrbPerKapitaAdmin.show.vue'], resolve),
         navbar: resolve => require(['./components/Navbar.vue'], resolve),
@@ -111,7 +111,25 @@ children: [
   ]
 },
 ```
-
+#### admin
+```javascript
+{
+    name: 'Admin',
+    icon: 'fa fa-lock',
+    childType: 'collapse',
+    childItem: [
+      {
+        name: 'Dashboard',
+        icon: 'fa fa-angle-double-right',
+        child: [
+        //=== ...
+          {
+            name: 'PDRB Per Kapita',
+            link: '/admin/dashboard/pdrb-per-kapita',
+            icon: 'fa fa-angle-right'
+          }
+          
+```
 
 #### Tambahkan components `resources/assets/js/components.js` :
 
